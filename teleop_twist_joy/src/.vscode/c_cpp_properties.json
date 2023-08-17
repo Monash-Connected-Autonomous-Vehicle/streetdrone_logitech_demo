@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/mcav/joy_ws/install/wiimote/include/**",
+        "/home/mcav/joy_ws/install/wiimote_msgs/include/**",
+        "/home/mcav/joy_ws/install/teleop_twist_joy/include/**",
+        "/home/mcav/joy_ws/install/spacenav/include/**",
+        "/home/mcav/joy_ws/install/joy/include/**",
+        "/home/mcav/mcav_ws/install/sd_msgs/include/**",
+        "/home/mcav/mcav_ws/install/mcav_interfaces/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/mcav/joy_ws/src/SD-VehicleInterface/vehicle_interface/include/**",
+        "/home/mcav/joy_ws/src/joystick_drivers/joy/include/**",
+        "/home/mcav/joy_ws/src/joystick_drivers/spacenav/include/**",
+        "/home/mcav/joy_ws/src/joystick_drivers/wiimote/include/**",
+        "/home/mcav/joy_ws/src/teleop_twist_joy/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
