@@ -19,17 +19,17 @@ class TwistToMotor(Node):
         
         #self.ser = serial.Serial('/dev/ttyACM0', 115200)
         
-	def motor_callback(self, msg):
-		lin_vel = msg.twist.linear.x
-		ang_pos = msg.twist.angular.z
-		
-		# map lin_vel from 0-10 to 1500-1800 then convert to int
-		pwm_val = int(self.translate(lin_vel, 0, 10, 1500, 1800))
-		print(str(lin_vel) + " m/s -> "+ str(pwm_val) +"us")
-		
+    def motor_callback(self, msg):
+        lin_vel = msg.twist.linear.x
+        ang_pos = msg.twist.angular.z
+        
+        # map lin_vel from 0-10 to 1500-1800 then convert to int
+        pwm_val = int(self.translate(lin_vel, 0, 10, 1500, 1800))
+        print(str(lin_vel) + " m/s -> "+ str(pwm_val) +"us")
+        
         pub_msg = SetPosition()
         pub_msg.id = 1
-        pub_msg.position = translate(ang_pos, -1.7, 1.7, 0, 4095)
+        pub_msg.position = int(self.translate(ang_pos, -1.7, 1.7, 0, 4095))
         self.servo_publisher.publish(pub_msg)
 		
         # publish to serial
