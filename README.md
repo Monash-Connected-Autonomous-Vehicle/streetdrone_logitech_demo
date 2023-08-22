@@ -15,3 +15,9 @@ source install/setup.bash
 ros2 launch teleop_twist_joy teleop-launch.py
 
 ```
+In new terminal window
+```
+source install/setup.bash
+ros2 run twist_to_motor twist_to_motor
+```
+Need to git clonde the sdk thing again idk y
