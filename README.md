@@ -15,6 +15,12 @@ source install/setup.bash
 ros2 launch teleop_twist_joy teleop-launch.py
 
 ```
+IN a new terminal window
+```
+source install/setup.bash
+ros2 run dynamixel_sdk_examples read_write_node
+```
+
 In new terminal window
 ```
 source install/setup.bash
