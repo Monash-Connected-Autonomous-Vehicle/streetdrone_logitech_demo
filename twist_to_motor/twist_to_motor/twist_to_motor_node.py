@@ -17,7 +17,7 @@ class TwistToMotor(Node):
         self.servo_publisher = 	self.create_publisher(SetPosition,'set_position',1)
         #self.motor_publisher = self.create_publisher()#To be defined
         
-        self.ser = serial.Serial('/dev/ttyACM0', 115200)
+        # self.ser = serial.Serial(port='/dev/ttyACM0', baudrate=115200, timeout=.1)
         
     def motor_callback(self, msg):
         lin_vel = msg.twist.linear.x
@@ -34,9 +34,10 @@ class TwistToMotor(Node):
 		
 		
 		# print(str(ang_pos) + " -> " + str(servo_pos))
-        print(str(lin_vel) + " m/s -> "+ str(pwm_val) +"us")
+        # print(str(lin_vel) + " m/s -> "+ str(pwm_val) +"us")
         # publish to serial
-        self.ser.write(pwm_val.to_bytes(2, byteorder='big'))
+        # self.ser.write(bytes("1600", 'utf-8'))
+        
 		
 		
     def translate(self, value, leftMin, leftMax, rightMin, rightMax):
